@@ -1,0 +1,547 @@
+from msilib import Table
+
+
+@@ 4,6+5,6 @@
+# -*- coding: utf-8 -*-	# -*- coding: utf-8 -*-
+"""	"""
+Table Community supported Hyper API sample	Tableau Community supported Hyper API sample.
+This module provies an Abstract Base Class with some utility methods to extract	This module provies an Abstract Base Class with some utility methods to extract
+from cloud databases to "live to hyper" Tableau Datasources.  This implements a	from cloud databases to "live to hyper" Tableau Datasources.  This implements a
+@@ -45,7 +45,6 @@
+import re	import re
+
+
+import tableauserverclient as TSC	import tableauserverclient as TSC
+import tableau_restapi_helpers as REST	
+from tableauhyperapi import (	from tableauhyperapi import (
+    HyperProcess,	    HyperProcess,
+    Connection,	    Connection,
+@@ -136,29 +135,29 @@
+
+
+
+
+class TableauJobError(Exception):	class TableauJobError(Exception):
+    """Exception: Tableau Job Failed"""	    """Exception: Tableau Job Failed."""
+
+
+    pass	    pass
+
+
+
+
+class TableauResourceNotFoundError(Exception):	class TableauResourceNotFoundError(Exception):
+    """Exception: Tableau Resource not found"""	    """Exception: Tableau Resource not found."""
+
+
+    pass	    pass
+
+
+
+
+class HyperSQLTypeMappingError(Exception):	class HyperSQLTypeMappingError(Exception):
+    """Exception: Could not identify a target Hyper field type for source database field"""	    """Exception: Could not identify a target Hyper field type for source database field."""
+
+
+    pass	    pass
+
+
+
+
+class ExtractorConfigurationError(Exception):	class ExtractorConfigurationError(Exception):
+    """Exception: config.yml is missing required section(s) or argument(s)"""	    """Exception: config.yml is missing required section(s) or argument(s)."""
+
+
+
+
+def log_execution_time(func):	def log_execution_time(func):
+    """Decorator used during debugging to time execution"""	    """Decorator: Log function execution time."""
+
+
+    def execution_timer(*args, **kw):	    def execution_timer(*args, **kw):
+        ts = time.time()	        ts = time.time()
+@@ -171,7 +170,7 @@ def execution_timer(*args, **kw):
+
+
+
+
+def debug(func):	def debug(func):
+    """Log the function arguments and return value"""	    """Decorator: Log the function arguments and return value."""
+
+
+    @functools.wraps(func)	    @functools.wraps(func)
+    def wrapper_debug(*args, **kwargs):	    def wrapper_debug(*args, **kwargs):
+@@ -190,15 +189,16 @@ def wrapper_debug(*args, **kwargs):
+
+
+
+
+def tempfile_name(prefix: str = "", suffix: str = "") -> str:	def tempfile_name(prefix: str = "", suffix: str = "") -> str:
+    """Return a unique temporary file name."""
+    return "{}/tableau_extractor_{}{}{}".format(TEMP_DIR, prefix, uuid.uuid4().hex, suffix)	    return "{}/tableau_extractor_{}{}{}".format(TEMP_DIR, prefix, uuid.uuid4().hex, suffix)
+
+
+
+
+class BaseExtractor(ABC):	class BaseExtractor(ABC):
+    """	    """
+    Abstract Base Class defining the standard Extractor Interface	    Abstract Base Class defining the standard Extractor Interface.
+    Authentication to Tableau Server can be either by Personal Access Token or	    Authentication to Tableau Server can be either by Personal Access Token or
+     Username and Password.	    Username and Password.
+    Constructor Args:	    Constructor Args:
+    - source_database_config (dict): Source database parameters	    - source_database_config (dict): Source database parameters
+@@ -250,8 +250,9 @@ def __init__(
+    @property	    @property
+    def sql_identifier_quote(self):	    def sql_identifier_quote(self):
+        """	        """
+        Property defines how table identifiers etc. are quoted when SQL is generated	        Property defines how table identifiers etc. are quoted when SQL is generated.
+        Default is ` - i.e. `myschema.mytable`	
+        Default quote character is ` - i.e. `myschema.mytable`
+        """	        """
+        return self.__sql_identifier_quote	        return self.__sql_identifier_quote
+
+
+@@ -260,13 +261,7 @@ def sql_identifier_quote(self, new_char):
+        self.__sql_identifier_quote = new_char	        self.__sql_identifier_quote = new_char
+
+
+    def quoted_sql_identifier(self, sql_identifier: str) -> str:	    def quoted_sql_identifier(self, sql_identifier: str) -> str:
+        """	        """Parse a SQL Identifier (e.g. Table/Column Name) and return escaped and quoted version."""
+        Parse a SQL Identifier (e.g. Table Name, Column Name) and returns	
+        escaped and quoted version ()	
+        Replace this with your database connector mechanism if one is defined	
+        """	
+
+        sql_identifier = sql_identifier.strip()	        sql_identifier = sql_identifier.strip()
+
+
+        if sql_identifier is None:	        if sql_identifier is None:
+@@ -288,14 +283,12 @@ def quoted_sql_identifier(self, sql_identifier: str) -> str:
+
+
+    @abstractmethod	    @abstractmethod
+    def source_database_cursor(self) -> Any:	    def source_database_cursor(self) -> Any:
+        """	        """Return a DBAPI Cursor to the source database."""
+        Returns a DBAPI Cursor to the source database	
+        """	
+
+
+    @abstractmethod	    @abstractmethod
+    def hyper_sql_type(self, source_column: Any) -> SqlType:	    def hyper_sql_type(self, source_column: Any) -> SqlType:
+        """	        """
+        Finds the corresponding Hyper column type for source_column	        Find the corresponding Hyper column type for source_column.
+        source_column (obj): Source column descriptor (e.g. DBAPI Column description tuple)	        source_column (obj): Source column descriptor (e.g. DBAPI Column description tuple)
+@@ -305,7 +298,7 @@ def hyper_sql_type(self, source_column: Any) -> SqlType:
+    @abstractmethod	    @abstractmethod
+    def hyper_table_definition(self, source_table: Any, hyper_table_name: str = "Extract") -> TableDefinition:	    def hyper_table_definition(self, source_table: Any, hyper_table_name: str = "Extract") -> TableDefinition:
+        """	        """
+        Build a hyper table definition from source_table	        Build a hyper table definition from source_table.
+        source_table (obj): Source table or query resultset descriptor	        source_table (obj): Source table or query resultset descriptor
+        hyper_table_name (string): Name of the target Hyper table, default="Extract"	        hyper_table_name (string): Name of the target Hyper table, default="Extract"
+@@ -315,7 +308,8 @@ def hyper_table_definition(self, source_table: Any, hyper_table_name: str = "Ext
+
+
+    def _datasource_lock(self, tab_ds_name: str) -> FileLock:	    def _datasource_lock(self, tab_ds_name: str) -> FileLock:
+        """	        """
+        Returns a posix lock for the named datasource.	        Return a posix lock for the named datasource.
+        NOTE: Exclusive lock is not actually acquired until you call "with lock:" or "lock.acquire():	        NOTE: Exclusive lock is not actually acquired until you call "with lock:" or "lock.acquire():
+        e.g.	        e.g.
+            lock=self._datasource_lock(tab_ds_name)	            lock=self._datasource_lock(tab_ds_name)
+@@ -327,9 +321,7 @@ def _datasource_lock(self, tab_ds_name: str) -> FileLock:
+        return FileLock(lock_path, timeout=DATASOURCE_LOCK_TIMEOUT)	        return FileLock(lock_path, timeout=DATASOURCE_LOCK_TIMEOUT)
+
+
+    def _get_project_id(self, tab_project: str) -> str:	    def _get_project_id(self, tab_project: str) -> str:
+        """	        """Return project_id for tab_project."""
+        Return project_id for tab_project	
+        """	
+        all_projects, pagination_item = self.tableau_server.projects.get()	        all_projects, pagination_item = self.tableau_server.projects.get()
+
+
+        for project in all_projects:	        for project in all_projects:
+@@ -339,47 +331,17 @@ def _get_project_id(self, tab_project: str) -> str:
+        logger.error("No project found for:{}".format(tab_project))	        logger.error("No project found for:{}".format(tab_project))
+        raise TableauResourceNotFoundError("No project found for:{}".format(tab_project))	        raise TableauResourceNotFoundError("No project found for:{}".format(tab_project))
+
+
+    def _get_datasource_id(self, tab_datasource: str) -> str:	    def _get_datasource_by_name(self, tab_datasource: str) -> str:
+        """	        """Return datasource object with name=tab_datasource."""
+        Return id for tab_datasource	
+        """	
+        # Get project_id from project_name	        # Get project_id from project_name
+
+
+        all_datasources, pagination_item = self.tableau_server.datasources.get()	        all_datasources, pagination_item = self.tableau_server.datasources.get()
+        for datasource in all_datasources:	        for datasource in all_datasources:
+            if datasource.name == tab_datasource:	            if datasource.name == tab_datasource:
+                return datasource.id	                return datasource
+
+
+        raise TableauResourceNotFoundError("No datasource found for:{}".format(tab_datasource))	        raise TableauResourceNotFoundError("No datasource found for:{}".format(tab_datasource))
+
+
+    def _wait_for_async_job(self, async_job_id: str) -> int:	
+        """	
+        Waits for async job to complete and returns finish_code	
+        """	
+
+        completed_at = None	
+        finish_code = None	
+        jobinfo = None	
+        while completed_at is None:	
+            time.sleep(ASYNC_JOB_POLL_INTERVAL)	
+            jobinfo = self.tableau_server.jobs.get_by_id(async_job_id)	
+            completed_at = jobinfo.completed_at	
+            finish_code = jobinfo.finish_code	
+            logger.info("Job {} ... progress={} finishCode={}".format(async_job_id, jobinfo.progress, finish_code))	
+        if finish_code == "0":	
+            logger.info("Job {} Completed: Finish Code: {}".format(async_job_id, finish_code))	
+        else:	
+            full_job_details = REST.get_job_details(	
+                self.tableau_hostname,	
+                self.tableau_server.auth_token,	
+                self.tableau_server.site_id,	
+                async_job_id,	
+            )	
+            logger.error("Job {} Completed with non-zero Finish Code: {} : {}".format(async_job_id, finish_code, full_job_details))	
+            logger.error("Check jobs pane in Tableau for detailed failure information")	
+
+        return finish_code	
+
+    def query_result_to_hyper_file(	    def query_result_to_hyper_file(
+        self,	        self,
+        target_table_def: Optional[TableDefinition] = None,	        target_table_def: Optional[TableDefinition] = None,
+@@ -388,7 +350,8 @@ def query_result_to_hyper_file(
+        hyper_table_name: str = "Extract",	        hyper_table_name: str = "Extract",
+    ) -> Path:	    ) -> Path:
+        """	        """
+        Writes query output to a Hyper file	        Write query output to a Hyper file.
+        Returns Path to hyper file	        Returns Path to hyper file
+        target_table_def (TableDefinition): Schema for target extract table	        target_table_def (TableDefinition): Schema for target extract table
+@@ -432,9 +395,11 @@ def query_result_to_hyper_file(
+                connection.catalog.create_table(table_definition=target_table_def)	                connection.catalog.create_table(table_definition=target_table_def)
+                with Inserter(connection, target_table_def) as inserter:	                with Inserter(connection, target_table_def) as inserter:
+                    if query_result_iter is not None:	                    if query_result_iter is not None:
+                        assert cursor is None
+                        inserter.add_rows(query_result_iter)	                        inserter.add_rows(query_result_iter)
+                        inserter.execute()	                        inserter.execute()
+                    else:	                    else:
+                        assert cursor is not None
+                        if rows:	                        if rows:
+                            # We have rows in the buffer from where we determined the cursor.description for server side cursor	                            # We have rows in the buffer from where we determined the cursor.description for server side cursor
+                            inserter.add_rows(rows)	                            inserter.add_rows(rows)
+@@ -460,15 +425,15 @@ def csv_to_hyper_file(
+        csv_format_options: str = """NULL 'NULL', delimiter ',', header FALSE""",	        csv_format_options: str = """NULL 'NULL', delimiter ',', header FALSE""",
+    ) -> Path:	    ) -> Path:
+        """	        """
+        Writes csv to a Hyper files	        Write csv to a Hyper file.
+        Returns Path to hyper file	        Returns Path to hyper file
+        path_to_csv (str): CSV file containing result rows	        path_to_csv (str): CSV file containing result rows
+        target_table_def (TableDefinition): Schema for target extract table	        target_table_def (TableDefinition): Schema for target extract table
+        csv_format_options (str): Specify csv file format options for COPY command	        csv_format_options (str): Specify csv file format options for COPY command
+            default csv format options: "NULL 'NULL', delimiter ',', header FALSE"	            default csv format options: "NULL 'NULL', delimiter ',', header FALSE"
+        """	        """
+
+        path_to_database = Path(tempfile_name(prefix="temp_", suffix=".hyper"))	        path_to_database = Path(tempfile_name(prefix="temp_", suffix=".hyper"))
+        with HyperProcess(telemetry=TELEMETRY) as hyper:	        with HyperProcess(telemetry=TELEMETRY) as hyper:
+            with Connection(	            with Connection(
+@@ -496,7 +461,7 @@ def publish_hyper_file(
+        publish_mode: TSC.Server.PublishMode = TSC.Server.PublishMode.CreateNew,	        publish_mode: TSC.Server.PublishMode = TSC.Server.PublishMode.CreateNew,
+    ) -> str:	    ) -> str:
+        """	        """
+        Publishes a Hyper file to Tableau Server	        Publish a Hyper file to Tableau Server.
+        path_to_database (string): Hyper file to publish	        path_to_database (string): Hyper file to publish
+        tab_ds_name (string): Target datasource name	        tab_ds_name (string): Target datasource name
+@@ -527,7 +492,7 @@ def update_datasource_from_hyper_file(
+        action: str = "UPDATE",	        action: str = "UPDATE",
+    ):	    ):
+        """	        """
+        Updates a datasource on Tableau Server with a changeset from a hyper file	        Update a datasource on Tableau Server with a changeset from a hyper file.
+        path_to_database (string): The hyper file containing the changeset	        path_to_database (string): The hyper file containing the changeset
+        tab_ds_name (string): Target Tableau datasource	        tab_ds_name (string): Target Tableau datasource
+@@ -559,176 +524,58 @@ def update_datasource_from_hyper_file(
+                match_conditions_json = match_conditions_args[0]	                match_conditions_json = match_conditions_args[0]
+
+
+        if action == "UPDATE":	        if action == "UPDATE":
+            # Update action	            actions_json = [
+            # The Update operation updates existing tuples inside the target table.	                {
+            # It uses a `condition` to decide which tuples (rows) to update.	                    "action": "update",
+            #	                    "source-schema": "Extract",
+            # Example	                    "source-table": changeset_table_name,
+            #	                    "target-schema": "Extract",
+            # {"action": "update",	                    "target-table": "Extract",
+            #  "target-table": "my_data",	                    "condition": match_conditions_json,
+            #  "source-table": "uploaded_table",	                },
+            #  "condition": {"op": "=", "target-col": "row_id", "source-col": "update_row_id"}	            ]
+            # }	        elif action == "DELETE":
+            # Parameters:	            if path_to_database is None:
+            #	                actions_json = [
+            # `target-table` (string; required): the table name inside the target database into which we will insert data	
+            # `target-schema` (string; required): the schema name inside the target database; default: the one, unique schema name inside the target database in case the target db has only one schema; error otherwise	
+            # `source-table` (string; required): the table name inside the source database from which the data will be inserted	
+            # `source-schema` (string; required): analogous to target-schema, but for the source table	
+            # `condition` (condition-specification; required): specifies the condition used to select the columns to be updated	
+            # To determine the updated columns, we will use the following default algorithm:	
+            #	
+            # We will map columns from the the source table onto the target table, based on their column name. This mapping will not consider the order of columns inside the tables, but will be solely based on column names. The same rules as for insert apply for this column mapping.	
+            # If any column from the source table does not have a corresponding column in the target table and is not referenced by the `condition` either, we will raise an error	
+            # This algorithm ensures that:	
+            #	
+            # we update all columns if they have a matching name	
+            # we bring mismatching columns to the users attention (e.g., if his column name is “userid” instead of “user_id”)	
+            # The update action is mapped to a SQL query of the form	
+            #	
+            # UPDATE target_db.<target-schema>.<target>	
+            # SET	
+            #    <target column 1> = <source column 1>,	
+            #    <target column 2> = <source column 2>,	
+            #    ...	
+            # FROM <source>	
+            # WHERE <condition>	
+            # -------	
+            json_request = {	
+                "actions": [	
+                    # UPDATE action	
+                    {	                    {
+                        "action": "update",	                        "action": "delete",
+                        "source-schema": "Extract",	
+                        "source-table": changeset_table_name,	
+                        "target-schema": "Extract",	                        "target-schema": "Extract",
+                        "target-table": "Extract",	                        "target-table": "Extract",
+                        "condition": match_conditions_json,	                        "condition": match_conditions_json,
+                    },	                    },
+                ]	                ]
+            }	
+        elif action == "DELETE":	
+            # # The Delete operation deletes tuples from its target table.	
+            # It uses its `condition` to determine which tuples to delete.	
+            #	
+            # Example 1	
+            #	
+            # {"action": "delete",	
+            #  "target-table": "my_extract_table",	
+            #  "condition": {	
+            #    "op": "<",	
+            #    "target-col": "col1",	
+            #    "const": {"type": "datetime", "v": "2020-06-00"}}	
+            # }	
+            # Example 2	
+            #	
+            # {"action": "delete",	
+            #  "target-table": "my_extract_table",	
+            #  "source-table": "deleted_row_id_table",	
+            #  "condition": {"op": "=", "target-col": "id", "source-col": "deleted_id"}	
+            # }	
+            # Parameters:	
+            #	
+            # `target-table` (string; required): the table name inside the source database from which we will insert data	
+            # `target-schema` (string; required): analogous to source-schema, but for the source table	
+            # `source-table` (string; optional): the table name inside the target database into which the data will be inserted	
+            # `source-schema` (string; optional): the schema name inside the target database; default: the one, unique schema name inside the target database in case the target db has only one schema; error otherwise	
+            # `condition` (condition-specification; required): specifies the condition used to select the columns for deletion	
+            #	
+            # See separate section for the definition of `condition`s.	
+            #	
+            # If no `source` table is specified, the delete action will be translated to	
+            #	
+            # DELETE FROM target_db.<target-schema>.<target>	
+            # WHERE <condition>	
+            # This variant will be useful for “sliding window” extract, as described below in the examples section	
+            #	
+            # If a `source` table is specified, the delete action will be translated to	
+            #	
+            # DELETE FROM target_db.<target-schema>.<target>	
+            # WHERE EXISTS (	
+            #    SELECT * FROM <source-db>.<source-schema>.<source>	
+            #    WHERE <condition>	
+            # )	
+            # This variant is useful to delete many tuples, e.g., based on their row ID	
+            #	
+            # It is an error if the source table contains any additional columns not referenced by the condition. Those columns are pointless and we want to let the user know, so they can fix their scripts accordingly.	
+            if path_to_database is None:	
+                json_request = {	
+                    "actions": [	
+                        # UPDATE action	
+                        {	
+                            "action": "delete",	
+                            "target-schema": "Extract",	
+                            "target-table": "Extract",	
+                            "condition": match_conditions_json,	
+                        },	
+                    ]	
+                }	
+            else:	            else:
+                json_request = {	                actions_json = [
+                    "actions": [	
+                        # UPDATE action	
+                        {	
+                            "action": "delete",	
+                            "source-schema": "Extract",	
+                            "source-table": changeset_table_name,	
+                            "target-schema": "Extract",	
+                            "target-table": "Extract",	
+                            "condition": match_conditions_json,	
+                        },	
+                    ]	
+                }	
+        elif action == "INSERT":	
+            # The "insert" operation appends one or more rows from a table inside the uploaded Hyper file into the updated Hyper file on the server.	
+            #	
+            # Example	
+            #	
+            # {"action": "insert", "source-table": "added_users", "target-table": "current_users"}	
+            # Parameters:	
+            #	
+            # `target-table` (string; required): the table name inside the target database from which we will insert data	
+            # `target-schema` (string; required): analogous to target-schema, but for the source table	
+            # `source-table` (string; required): the table name inside the source database into which the data will be inserted	
+            # `source-schema` (string; required): the schema name inside the source database; default: the one, unique schema name inside the target database in case the target db has only one schema; error otherwise	
+            json_request = {	
+                "actions": [	
+                    # INSERT action	
+                    {	                    {
+                        "action": "insert",	                        "action": "delete",
+                        "source-schema": "Extract",	                        "source-schema": "Extract",
+                        "source-table": changeset_table_name,	                        "source-table": changeset_table_name,
+                        "target-schema": "Extract",	                        "target-schema": "Extract",
+                        "target-table": "Extract",	                        "target-table": "Extract",
+                        "condition": match_conditions_json,
+                    },	                    },
+                ]	                ]
+            }	        elif action == "INSERT":
+            actions_json = [
+                {
+                    "action": "insert",
+                    "source-schema": "Extract",
+                    "source-table": changeset_table_name,
+                    "target-schema": "Extract",
+                    "target-table": "Extract",
+                },
+            ]
+        else:	        else:
+            raise Exception("Unknown action {} specified for _update_datasource_from_hyper_file".format(action))	            raise Exception("Unknown action {} specified for _update_datasource_from_hyper_file".format(action))
+        file_upload_id = None	
+        if path_to_database is not None:	        this_datasource = self._get_datasource_by_name(tab_ds_name)
+            # Update or delete by row_id	
+            file_upload_id = REST.upload_file(	
+                path_to_database,	
+                self.tableau_hostname,	
+                self.tableau_server.auth_token,	
+                self.tableau_server.site_id,	
+            )	
+        ds_id = self._get_datasource_id(tab_ds_name)	
+        lock = self._datasource_lock(tab_ds_name)	        lock = self._datasource_lock(tab_ds_name)
+        with lock:	        with lock:
+            async_job_id = REST.patch_datasource(	            request_id = str(uuid.uuid4())
+                server=self.tableau_hostname,	            async_job = self.tableau_server.datasources.update_hyper_data(
+                auth_token=self.tableau_server.auth_token,	                datasource_or_connection_item=this_datasource, request_id=request_id, actions=actions_json, payload=path_to_database
+                site_id=self.tableau_server.site_id,	
+                datasource_id=ds_id,	
+                file_upload_id=file_upload_id,	
+                request_json=json_request,	
+            )	            )
+            finish_code = self._wait_for_async_job(async_job_id)	            self.tableau_server.jobs.wait_for_job(async_job)
+            if finish_code != "0":	
+                raise TableauJobError("Patch job {} terminated with non-zero return code:{}".format(async_job_id, finish_code))	
+
+
+    def query_to_hyper_files(	    def query_to_hyper_files(
+        self,	        self,
+@@ -737,8 +584,9 @@ def query_to_hyper_files(
+        hyper_table_name: str = "Extract",	        hyper_table_name: str = "Extract",
+    ) -> Generator[Path, None, None]:	    ) -> Generator[Path, None, None]:
+        """	        """
+        Executes sql_query or exports rows from source_table and writes output	        Execute sql_query or export rows from source_table and write output to one or more hyper files.
+        to one or more hyper files.  This base implementation uses the standard	
+        This base implementation uses the standard
+        DBAPIv2 cursor methods and this should be overwritten if your native	        DBAPIv2 cursor methods and this should be overwritten if your native
+        database client libraries include more efficient export etc. routines.	        database client libraries include more efficient export etc. routines.
+@@ -751,7 +599,6 @@ def query_to_hyper_files(
+        NOTES:	        NOTES:
+        - Specify either sql_query OR source_table, error if both specified	        - Specify either sql_query OR source_table, error if both specified
+        """	        """
+
+        if not (bool(sql_query) ^ bool(source_table)):	        if not (bool(sql_query) ^ bool(source_table)):
+            raise Exception("Must specify either sql_query OR source_table")	            raise Exception("Must specify either sql_query OR source_table")
+
+
+@@ -775,7 +622,7 @@ def load_sample(
+        publish_mode: TSC.Server.PublishMode = TSC.Server.PublishMode.CreateNew,	        publish_mode: TSC.Server.PublishMode = TSC.Server.PublishMode.CreateNew,
+    ) -> None:	    ) -> None:
+        """	        """
+        Loads a sample of rows from source_table to Tableau Server	        Load a sample of rows from source_table to Tableau Server.
+        tab_ds_name (string): Target datasource name	        tab_ds_name (string): Target datasource name
+        source_table (string): Source table identifier	        source_table (string): Source table identifier
+@@ -786,7 +633,6 @@ def load_sample(
+        NOTES:	        NOTES:
+        - Specify either sql_query OR source_table, error if both specified	        - Specify either sql_query OR source_table, error if both specified
+        """	        """
+
+        if not (bool(sql_query) ^ bool(source_table)):	        if not (bool(sql_query) ^ bool(source_table)):
+            raise Exception("Must specify either sql_query OR source_table")	            raise Exception("Must specify either sql_query OR source_table")
+
+
+@@ -795,6 +641,7 @@ def load_sample(
+        if sql_query:	        if sql_query:
+            sql_query = "{} LIMIT {}".format(sql_query, sample_rows)	            sql_query = "{} LIMIT {}".format(sql_query, sample_rows)
+        else:	        else:
+            assert source_table is not None
+            sql_query = "SELECT * FROM {} LIMIT {}".format(self.quoted_sql_identifier(source_table), sample_rows)	            sql_query = "SELECT * FROM {} LIMIT {}".format(self.quoted_sql_identifier(source_table), sample_rows)
+        first_chunk = True	        first_chunk = True
+        for path_to_database in self.query_to_hyper_files(sql_query=sql_query):	        for path_to_database in self.query_to_hyper_files(sql_query=sql_query):
+@@ -818,7 +665,7 @@ def export_load(
+        publish_mode: TSC.Server.PublishMode = TSC.Server.PublishMode.CreateNew,	        publish_mode: TSC.Server.PublishMode = TSC.Server.PublishMode.CreateNew,
+    ) -> None:	    ) -> None:
+        """	        """
+        Bulk export the contents of source_table and load to Tableau Server	        Bulk export the contents of source_table and load to Tableau Server.
+        tab_ds_name (string): Target datasource name	        tab_ds_name (string): Target datasource name
+        source_table (string): Source table identifier	        source_table (string): Source table identifier
+@@ -828,7 +675,6 @@ def export_load(
+        NOTES:	        NOTES:
+        - Specify either sql_query OR source_table, error if both specified	        - Specify either sql_query OR source_table, error if both specified
+        """	        """
+
+        first_chunk = True	        first_chunk = True
+        for path_to_database in self.query_to_hyper_files(source_table=source_table, sql_query=sql_query):	        for path_to_database in self.query_to_hyper_files(source_table=source_table, sql_query=sql_query):
+            if first_chunk:	            if first_chunk:
+@@ -851,7 +697,7 @@ def append_to_datasource(
+        changeset_table_name: str = "new_rows",	        changeset_table_name: str = "new_rows",
+    ) -> None:	    ) -> None:
+        """	        """
+        Appends the result of sql_query to a datasource on Tableau Server	        Append the result of sql_query to a datasource on Tableau Server.
+        tab_ds_name (string): Target datasource name	        tab_ds_name (string): Target datasource name
+        sql_query (string): The query string that generates the changeset	        sql_query (string): The query string that generates the changeset
+@@ -862,7 +708,6 @@ def append_to_datasource(
+        NOTES:	        NOTES:
+        - Must specify either sql_query OR source_table, error if both specified	        - Must specify either sql_query OR source_table, error if both specified
+        """	        """
+
+        if not (bool(sql_query) ^ bool(source_table)):	        if not (bool(sql_query) ^ bool(source_table)):
+            raise Exception("Must specify either sql_query OR source_table")	            raise Exception("Must specify either sql_query OR source_table")
+
+
+@@ -890,7 +735,7 @@ def update_datasource(
+        changeset_table_name: str = "updated_rows",	        changeset_table_name: str = "updated_rows",
+    ) -> None:	    ) -> None:
+        """	        """
+        Updates a datasource on Tableau Server with the changeset from sql_query	        Update a datasource on Tableau Server with the changeset from sql_query.
+        tab_ds_name (string): Target datasource name	        tab_ds_name (string): Target datasource name
+        sql_query (string): The query string that generates the changeset	        sql_query (string): The query string that generates the changeset
+@@ -905,7 +750,6 @@ def update_datasource(
+        - Specify either match_columns OR match_conditions_json, error if both specified	        - Specify either match_columns OR match_conditions_json, error if both specified
+        - Specify either sql_query OR source_table, error if both specified	        - Specify either sql_query OR source_table, error if both specified
+        """	        """
+
+        if not ((match_columns is None) ^ (match_conditions_json is None)):	        if not ((match_columns is None) ^ (match_conditions_json is None)):
+            raise Exception("Must specify either match_columns OR match_conditions_json")	            raise Exception("Must specify either match_columns OR match_conditions_json")
+        if not ((sql_query is None) ^ (source_table is None)):	        if not ((sql_query is None) ^ (source_table is None)):
+@@ -937,8 +781,9 @@ def delete_from_datasource(
+        changeset_table_name: str = "deleted_rowids",	        changeset_table_name: str = "deleted_rowids",
+    ) -> None:	    ) -> None:
+        """	        """
+        Delete rows matching the changeset from sql_query from a datasource on Tableau Server	        Delete rows from a datasource on Tableau Server.
+        Simple delete by condition when sql_query is None	
+        Delete rows matching the changeset from sql_query or simple delete by condition when sql_query is None
+        tab_ds_name (string): Target datasource name	        tab_ds_name (string): Target datasource name
+        sql_query (string): The query string that generates the changeset	        sql_query (string): The query string that generates the changese

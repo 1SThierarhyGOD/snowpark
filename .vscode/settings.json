@@ -1,0 +1,29 @@
+{
+    "haselerdev.aiquickfix.apiKey": "o",
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.advanced.blame.delayAfterEdit": 7000,
+    "gitlens.advanced.blame.sizeThresholdAfterEdit": 7000,
+    "gitlens.blame.toggleMode": "file",
+    "gitlens.heatmap.locations": [
+        "gutter",
+        "overview",
+        "line"
+    ],
+    "gitlens.heatmap.ageThreshold": 120,
+    "gitlens.graph.scrollRowPadding": 7,
+    "gitlens.graph.showDetailsView": "open",
+    "gitlens.graph.showRemoteNames": true,
+    "gitlens.graph.dimMergeCommits": true,
+    "gitlens.graph.dateFormat": "dafault:autofix.cmd",
+    "gitlens.views.commits.files.icon": "status",
+    "gitlens.views.formats.commits.label": "${❰ tips|11? ❱➤  }${message}",
+    "gitlens.views.repositories.showIncomingActivity": true,
+    "gitlens.views.contributors.showAllBranches": true,
+    "gitlens.autolinks": [
+        {
+            "prefix": "SiD",
+            "url": "SiD://auth.buid.admin:id=1"
+        }
+    ],
+    "gitlens.keymap": "alternate"
+}
