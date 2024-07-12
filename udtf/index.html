@@ -1,0 +1,727 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Snowpark 1.12.1  - com.snowflake.snowpark.udtf</title>
+          <meta name="description" content="Snowpark 1.12.1 - com.snowflake.snowpark.udtf" />
+          <meta name="keywords" content="Snowpark 1.12.1 com.snowflake.snowpark.udtf" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../../index.js"></script>
+      <script type="text/javascript" src="../../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Snowpark 1.12.1<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.com" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="com"></a><a id="com:com"></a>
+      <span class="permalink">
+      <a href="../../../../com/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">com</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="com.snowflake" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="snowflake"></a><a id="snowflake:snowflake"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">snowflake</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="com">com</a></dd></dl></div>
+    </li><li name="com.snowflake.snowpark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="snowpark"></a><a id="snowpark:snowpark"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">snowpark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="com.snowflake">snowflake</a></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.types" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="types"></a><a id="types:types"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/types/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="This package contains all Snowpark logical types." href="../types/index.html"><span class="name">types</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">This package contains all Snowpark logical types.</p><div class="fullcomment"><div class="comment cmt"><p>This package contains all Snowpark logical types.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.snowflake.snowpark">snowpark</a></dd><dt>Since</dt><dd><p>0.1.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf" visbl="pub" class="indented4 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="udtf"></a><a id="udtf:udtf"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">udtf</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.snowflake.snowpark">snowpark</a></dd></dl></div>
+    </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="trait" href="UDTF.html" title="The Scala UDTF (user-defined table function) trait."></a>
+                        <a href="UDTF.html" title="The Scala UDTF (user-defined table function) trait.">UDTF</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF0.html" title="The Scala UDTF (user-defined table function) abstract class that has no argument."></a>
+                        <a href="UDTF0.html" title="The Scala UDTF (user-defined table function) abstract class that has no argument.">UDTF0</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF1.html" title="The Scala UDTF (user-defined table function) abstract class that has 1 argument."></a>
+                        <a href="UDTF1.html" title="The Scala UDTF (user-defined table function) abstract class that has 1 argument.">UDTF1</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF10.html" title="The Scala UDTF (user-defined table function) abstract class that has 10 arguments."></a>
+                        <a href="UDTF10.html" title="The Scala UDTF (user-defined table function) abstract class that has 10 arguments.">UDTF10</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF11.html" title="The Scala UDTF (user-defined table function) abstract class that has 11 arguments."></a>
+                        <a href="UDTF11.html" title="The Scala UDTF (user-defined table function) abstract class that has 11 arguments.">UDTF11</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF12.html" title="The Scala UDTF (user-defined table function) abstract class that has 12 arguments."></a>
+                        <a href="UDTF12.html" title="The Scala UDTF (user-defined table function) abstract class that has 12 arguments.">UDTF12</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF13.html" title="The Scala UDTF (user-defined table function) abstract class that has 13 arguments."></a>
+                        <a href="UDTF13.html" title="The Scala UDTF (user-defined table function) abstract class that has 13 arguments.">UDTF13</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF14.html" title="The Scala UDTF (user-defined table function) abstract class that has 14 arguments."></a>
+                        <a href="UDTF14.html" title="The Scala UDTF (user-defined table function) abstract class that has 14 arguments.">UDTF14</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF15.html" title="The Scala UDTF (user-defined table function) abstract class that has 15 arguments."></a>
+                        <a href="UDTF15.html" title="The Scala UDTF (user-defined table function) abstract class that has 15 arguments.">UDTF15</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF16.html" title="The Scala UDTF (user-defined table function) abstract class that has 16 arguments."></a>
+                        <a href="UDTF16.html" title="The Scala UDTF (user-defined table function) abstract class that has 16 arguments.">UDTF16</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF17.html" title="The Scala UDTF (user-defined table function) abstract class that has 17 arguments."></a>
+                        <a href="UDTF17.html" title="The Scala UDTF (user-defined table function) abstract class that has 17 arguments.">UDTF17</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF18.html" title="The Scala UDTF (user-defined table function) abstract class that has 18 arguments."></a>
+                        <a href="UDTF18.html" title="The Scala UDTF (user-defined table function) abstract class that has 18 arguments.">UDTF18</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF19.html" title="The Scala UDTF (user-defined table function) abstract class that has 19 arguments."></a>
+                        <a href="UDTF19.html" title="The Scala UDTF (user-defined table function) abstract class that has 19 arguments.">UDTF19</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF2.html" title="The Scala UDTF (user-defined table function) abstract class that has 2 arguments."></a>
+                        <a href="UDTF2.html" title="The Scala UDTF (user-defined table function) abstract class that has 2 arguments.">UDTF2</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF20.html" title="The Scala UDTF (user-defined table function) abstract class that has 20 arguments."></a>
+                        <a href="UDTF20.html" title="The Scala UDTF (user-defined table function) abstract class that has 20 arguments.">UDTF20</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF21.html" title="The Scala UDTF (user-defined table function) abstract class that has 21 arguments."></a>
+                        <a href="UDTF21.html" title="The Scala UDTF (user-defined table function) abstract class that has 21 arguments.">UDTF21</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF22.html" title="The Scala UDTF (user-defined table function) abstract class that has 22 arguments."></a>
+                        <a href="UDTF22.html" title="The Scala UDTF (user-defined table function) abstract class that has 22 arguments.">UDTF22</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF3.html" title="The Scala UDTF (user-defined table function) abstract class that has 3 arguments."></a>
+                        <a href="UDTF3.html" title="The Scala UDTF (user-defined table function) abstract class that has 3 arguments.">UDTF3</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF4.html" title="The Scala UDTF (user-defined table function) abstract class that has 4 arguments."></a>
+                        <a href="UDTF4.html" title="The Scala UDTF (user-defined table function) abstract class that has 4 arguments.">UDTF4</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF5.html" title="The Scala UDTF (user-defined table function) abstract class that has 5 arguments."></a>
+                        <a href="UDTF5.html" title="The Scala UDTF (user-defined table function) abstract class that has 5 arguments.">UDTF5</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF6.html" title="The Scala UDTF (user-defined table function) abstract class that has 6 arguments."></a>
+                        <a href="UDTF6.html" title="The Scala UDTF (user-defined table function) abstract class that has 6 arguments.">UDTF6</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF7.html" title="The Scala UDTF (user-defined table function) abstract class that has 7 arguments."></a>
+                        <a href="UDTF7.html" title="The Scala UDTF (user-defined table function) abstract class that has 7 arguments.">UDTF7</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF8.html" title="The Scala UDTF (user-defined table function) abstract class that has 8 arguments."></a>
+                        <a href="UDTF8.html" title="The Scala UDTF (user-defined table function) abstract class that has 8 arguments.">UDTF8</a>
+                      </li><li class="current-entities indented4">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTF9.html" title="The Scala UDTF (user-defined table function) abstract class that has 9 arguments."></a>
+                        <a href="UDTF9.html" title="The Scala UDTF (user-defined table function) abstract class that has 9 arguments.">UDTF9</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../../../index.html" class="extype" name="com">com</a>.<a href="../../index.html" class="extype" name="com.snowflake">snowflake</a>.<a href="../index.html" class="extype" name="com.snowflake.snowpark">snowpark</a></p>
+        <h1>udtf<span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">udtf</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="com.snowflake.snowpark.udtf.UDTF" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTFextendsSerializable"></a><a id="UDTF:UDTF"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) trait." href="UDTF.html"><span class="name">UDTF</span></a><span class="result"> extends <span class="extype" name="java.io.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) trait.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) trait.</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF0" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF0extendsUDTF"></a><a id="UDTF0:UDTF0"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF0.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has no argument." href="UDTF0.html"><span class="name">UDTF0</span></a><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has no argument.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has no argument.</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF1" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF1[A0]extendsUDTF"></a><a id="UDTF1[A0]:UDTF1[A0]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF1.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 1 argument." href="UDTF1.html"><span class="name">UDTF1</span></a><span class="tparams">[<span name="A0">A0</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 1 argument.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 1 argument.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF10" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF10[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9]extendsUDTF"></a><a id="UDTF10[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9]:UDTF10[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF10.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 10 arguments." href="UDTF10.html"><span class="name">UDTF10</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 10 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 10 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF11" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF11[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10]extendsUDTF"></a><a id="UDTF11[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10]:UDTF11[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF11.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 11 arguments." href="UDTF11.html"><span class="name">UDTF11</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 11 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 11 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF12" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF12[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11]extendsUDTF"></a><a id="UDTF12[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11]:UDTF12[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF12.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 12 arguments." href="UDTF12.html"><span class="name">UDTF12</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 12 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 12 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF13" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF13[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12]extendsUDTF"></a><a id="UDTF13[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12]:UDTF13[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF13.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 13 arguments." href="UDTF13.html"><span class="name">UDTF13</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 13 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 13 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF14" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF14[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13]extendsUDTF"></a><a id="UDTF14[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13]:UDTF14[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF14.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 14 arguments." href="UDTF14.html"><span class="name">UDTF14</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 14 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 14 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF15" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF15[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14]extendsUDTF"></a><a id="UDTF15[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14]:UDTF15[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF15.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 15 arguments." href="UDTF15.html"><span class="name">UDTF15</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>, <span name="A14">A14</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 15 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 15 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF16" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF16[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15]extendsUDTF"></a><a id="UDTF16[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15]:UDTF16[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF16.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 16 arguments." href="UDTF16.html"><span class="name">UDTF16</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>, <span name="A14">A14</span>, <span name="A15">A15</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 16 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 16 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF17" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF17[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16]extendsUDTF"></a><a id="UDTF17[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16]:UDTF17[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF17.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 17 arguments." href="UDTF17.html"><span class="name">UDTF17</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>, <span name="A14">A14</span>, <span name="A15">A15</span>, <span name="A16">A16</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 17 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 17 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF18" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF18[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17]extendsUDTF"></a><a id="UDTF18[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17]:UDTF18[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF18.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 18 arguments." href="UDTF18.html"><span class="name">UDTF18</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>, <span name="A14">A14</span>, <span name="A15">A15</span>, <span name="A16">A16</span>, <span name="A17">A17</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 18 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 18 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF19" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF19[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18]extendsUDTF"></a><a id="UDTF19[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18]:UDTF19[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF19.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 19 arguments." href="UDTF19.html"><span class="name">UDTF19</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>, <span name="A14">A14</span>, <span name="A15">A15</span>, <span name="A16">A16</span>, <span name="A17">A17</span>, <span name="A18">A18</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 19 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 19 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF2" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF2[A0,A1]extendsUDTF"></a><a id="UDTF2[A0,A1]:UDTF2[A0,A1]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF2.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 2 arguments." href="UDTF2.html"><span class="name">UDTF2</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 2 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 2 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF20" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF20[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19]extendsUDTF"></a><a id="UDTF20[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19]:UDTF20[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF20.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 20 arguments." href="UDTF20.html"><span class="name">UDTF20</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>, <span name="A14">A14</span>, <span name="A15">A15</span>, <span name="A16">A16</span>, <span name="A17">A17</span>, <span name="A18">A18</span>, <span name="A19">A19</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 20 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 20 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF21" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF21[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20]extendsUDTF"></a><a id="UDTF21[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20]:UDTF21[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF21.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 21 arguments." href="UDTF21.html"><span class="name">UDTF21</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>, <span name="A14">A14</span>, <span name="A15">A15</span>, <span name="A16">A16</span>, <span name="A17">A17</span>, <span name="A18">A18</span>, <span name="A19">A19</span>, <span name="A20">A20</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 21 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 21 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF22" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF22[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20,A21]extendsUDTF"></a><a id="UDTF22[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20,A21]:UDTF22[A0,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20,A21]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF22.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 22 arguments." href="UDTF22.html"><span class="name">UDTF22</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>, <span name="A9">A9</span>, <span name="A10">A10</span>, <span name="A11">A11</span>, <span name="A12">A12</span>, <span name="A13">A13</span>, <span name="A14">A14</span>, <span name="A15">A15</span>, <span name="A16">A16</span>, <span name="A17">A17</span>, <span name="A18">A18</span>, <span name="A19">A19</span>, <span name="A20">A20</span>, <span name="A21">A21</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 22 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 22 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF3" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF3[A0,A1,A2]extendsUDTF"></a><a id="UDTF3[A0,A1,A2]:UDTF3[A0,A1,A2]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF3.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 3 arguments." href="UDTF3.html"><span class="name">UDTF3</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 3 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 3 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF4" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF4[A0,A1,A2,A3]extendsUDTF"></a><a id="UDTF4[A0,A1,A2,A3]:UDTF4[A0,A1,A2,A3]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF4.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 4 arguments." href="UDTF4.html"><span class="name">UDTF4</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 4 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 4 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF5" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF5[A0,A1,A2,A3,A4]extendsUDTF"></a><a id="UDTF5[A0,A1,A2,A3,A4]:UDTF5[A0,A1,A2,A3,A4]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF5.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 5 arguments." href="UDTF5.html"><span class="name">UDTF5</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 5 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 5 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF6" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF6[A0,A1,A2,A3,A4,A5]extendsUDTF"></a><a id="UDTF6[A0,A1,A2,A3,A4,A5]:UDTF6[A0,A1,A2,A3,A4,A5]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF6.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 6 arguments." href="UDTF6.html"><span class="name">UDTF6</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 6 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 6 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF7" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF7[A0,A1,A2,A3,A4,A5,A6]extendsUDTF"></a><a id="UDTF7[A0,A1,A2,A3,A4,A5,A6]:UDTF7[A0,A1,A2,A3,A4,A5,A6]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF7.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 7 arguments." href="UDTF7.html"><span class="name">UDTF7</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 7 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 7 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF8" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF8[A0,A1,A2,A3,A4,A5,A6,A7]extendsUDTF"></a><a id="UDTF8[A0,A1,A2,A3,A4,A5,A6,A7]:UDTF8[A0,A1,A2,A3,A4,A5,A6,A7]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF8.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 8 arguments." href="UDTF8.html"><span class="name">UDTF8</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 8 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 8 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf.UDTF9" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="UDTF9[A0,A1,A2,A3,A4,A5,A6,A7,A8]extendsUDTF"></a><a id="UDTF9[A0,A1,A2,A3,A4,A5,A6,A7,A8]:UDTF9[A0,A1,A2,A3,A4,A5,A6,A7,A8]"></a>
+      <span class="permalink">
+      <a href="../../../../com/snowflake/snowpark/udtf/UDTF9.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="The Scala UDTF (user-defined table function) abstract class that has 9 arguments." href="UDTF9.html"><span class="name">UDTF9</span></a><span class="tparams">[<span name="A0">A0</span>, <span name="A1">A1</span>, <span name="A2">A2</span>, <span name="A3">A3</span>, <span name="A4">A4</span>, <span name="A5">A5</span>, <span name="A6">A6</span>, <span name="A7">A7</span>, <span name="A8">A8</span>]</span><span class="result"> extends <a href="UDTF.html" class="extype" name="com.snowflake.snowpark.udtf.UDTF">UDTF</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">The Scala UDTF (user-defined table function) abstract class that has 9 arguments.</p><div class="fullcomment"><div class="comment cmt"><p>The Scala UDTF (user-defined table function) abstract class that has 9 arguments.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.2.0</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> © 2021 Snowflake Inc. All Rights Reserved </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>

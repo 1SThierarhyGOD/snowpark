@@ -1,0 +1,937 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>Snowpark 1.12.1  - com.snowflake.snowpark.MergeTypedAsyncJob</title>
+          <meta name="description" content="Snowpark 1.12.1 - com.snowflake.snowpark.MergeTypedAsyncJob" />
+          <meta name="keywords" content="Snowpark 1.12.1 com.snowflake.snowpark.MergeTypedAsyncJob" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      
+      <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../../lib/index.js"></script>
+      <script type="text/javascript" src="../../../index.js"></script>
+      <script type="text/javascript" src="../../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">Snowpark 1.12.1<span id="doc-version"></span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="../../../index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.com" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="com"></a><a id="com:com"></a>
+      <span class="permalink">
+      <a href="../../../com/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../../index.html"><span class="name">com</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="com.snowflake" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="snowflake"></a><a id="snowflake:snowflake"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">snowflake</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="com">com</a></dd></dl></div>
+    </li><li name="com.snowflake.snowpark" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="snowpark"></a><a id="snowpark:snowpark"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="index.html"><span class="name">snowpark</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="com.snowflake">snowflake</a></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.types" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="types"></a><a id="types:types"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/types/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="This package contains all Snowpark logical types." href="types/index.html"><span class="name">types</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">This package contains all Snowpark logical types.</p><div class="fullcomment"><div class="comment cmt"><p>This package contains all Snowpark logical types.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="com.snowflake.snowpark">snowpark</a></dd><dt>Since</dt><dd><p>0.1.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.udtf" visbl="pub" class="indented4 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="udtf"></a><a id="udtf:udtf"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/udtf/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="udtf/index.html"><span class="name">udtf</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="com.snowflake.snowpark">snowpark</a></dd></dl></div>
+    </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="AsyncJob.html" title="Provides a way to track an asynchronous query in Snowflake."></a>
+                        <a href="AsyncJob.html" title="Provides a way to track an asynchronous query in Snowflake.">AsyncJob</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="CaseExpr.html" title="Represents a CASE expression."></a>
+                        <a href="CaseExpr.html" title="Represents a CASE expression.">CaseExpr</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Column.html" title="Represents a column or an expression in a DataFrame."></a>
+                        <a href="Column.html" title="Represents a column or an expression in a DataFrame.">Column</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="CopyableDataFrame.html" title="DataFrame for loading data from files in a stage to a table."></a>
+                        <a href="CopyableDataFrame.html" title="DataFrame for loading data from files in a stage to a table.">CopyableDataFrame</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="CopyableDataFrameAsyncActor.html" title="Provides APIs to execute CopyableDataFrame actions asynchronously."></a>
+                        <a href="CopyableDataFrameAsyncActor.html" title="Provides APIs to execute CopyableDataFrame actions asynchronously.">CopyableDataFrameAsyncActor</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DataFrame.html" title="Represents a lazily-evaluated relational dataset that contains a collection of Row objects with columns defined by a schema (column name and type)."></a>
+                        <a href="DataFrame.html" title="Represents a lazily-evaluated relational dataset that contains a collection of Row objects with columns defined by a schema (column name and type).">DataFrame</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DataFrameAsyncActor.html" title="Provides APIs to execute DataFrame actions asynchronously."></a>
+                        <a href="DataFrameAsyncActor.html" title="Provides APIs to execute DataFrame actions asynchronously.">DataFrameAsyncActor</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DataFrameNaFunctions.html" title="Provides functions for handling missing values in a DataFrame."></a>
+                        <a href="DataFrameNaFunctions.html" title="Provides functions for handling missing values in a DataFrame.">DataFrameNaFunctions</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DataFrameReader.html" title="Provides methods to load data in various supported formats from a Snowflake stage to a DataFrame."></a>
+                        <a href="DataFrameReader.html" title="Provides methods to load data in various supported formats from a Snowflake stage to a DataFrame.">DataFrameReader</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DataFrameStatFunctions.html" title="Provides eagerly computed statistical functions for DataFrames."></a>
+                        <a href="DataFrameStatFunctions.html" title="Provides eagerly computed statistical functions for DataFrames.">DataFrameStatFunctions</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DataFrameWriter.html" title="Provides methods for writing data from a DataFrame to supported output destinations."></a>
+                        <a href="DataFrameWriter.html" title="Provides methods for writing data from a DataFrame to supported output destinations.">DataFrameWriter</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DataFrameWriterAsyncActor.html" title="Provides APIs to execute DataFrameWriter actions asynchronously."></a>
+                        <a href="DataFrameWriterAsyncActor.html" title="Provides APIs to execute DataFrameWriter actions asynchronously.">DataFrameWriterAsyncActor</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="DeleteResult.html" title="Result of deleting rows in an Updatable"></a>
+                        <a href="DeleteResult.html" title="Result of deleting rows in an Updatable">DeleteResult</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="FileOperation.html" title="Provides methods for working on files in a stage."></a>
+                        <a href="FileOperation.html" title="Provides methods for working on files in a stage.">FileOperation</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="GetResult.html" title="Represents the results of downloading a file from a stage location to the local file system."></a>
+                        <a href="GetResult.html" title="Represents the results of downloading a file from a stage location to the local file system.">GetResult</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="GroupingSets$.html" title="Constructors of GroupingSets object."></a>
+                        <a class="class" href="GroupingSets.html" title="A Container of grouping sets that you pass to DataFrame.groupByGroupingSets."></a>
+                        <a href="GroupingSets.html" title="A Container of grouping sets that you pass to DataFrame.groupByGroupingSets.">GroupingSets</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="HasCachedResult.html" title="A DataFrame that returns cached data."></a>
+                        <a href="HasCachedResult.html" title="A DataFrame that returns cached data.">HasCachedResult</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="MatchedClauseBuilder.html" title="Builder for a matched clause."></a>
+                        <a href="MatchedClauseBuilder.html" title="Builder for a matched clause.">MatchedClauseBuilder</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="MergeBuilder.html" title="Builder for a merge action."></a>
+                        <a href="MergeBuilder.html" title="Builder for a merge action.">MergeBuilder</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="MergeBuilderAsyncActor.html" title="Provides APIs to execute MergeBuilder actions asynchronously."></a>
+                        <a href="MergeBuilderAsyncActor.html" title="Provides APIs to execute MergeBuilder actions asynchronously.">MergeBuilderAsyncActor</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="MergeResult.html" title="Result of merging a DataFrame into an Updatable DataFrame"></a>
+                        <a href="MergeResult.html" title="Result of merging a DataFrame into an Updatable DataFrame">MergeResult</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="Provides a way to track an asynchronously executed action in a MergeBuilder."></a>
+                        <a href="" title="Provides a way to track an asynchronously executed action in a MergeBuilder.">MergeTypedAsyncJob</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="NotMatchedClauseBuilder.html" title="Builder for a not matched clause."></a>
+                        <a href="NotMatchedClauseBuilder.html" title="Builder for a not matched clause.">NotMatchedClauseBuilder</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="PublicPreview.html" title=""></a>
+                        <a href="PublicPreview.html" title="">PublicPreview</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="PutResult.html" title="Represents the results of uploading a local file to a stage location."></a>
+                        <a href="PutResult.html" title="Represents the results of uploading a local file to a stage location.">PutResult</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="RelationalGroupedDataFrame.html" title="Represents an underlying DataFrame with rows that are grouped by common values."></a>
+                        <a href="RelationalGroupedDataFrame.html" title="Represents an underlying DataFrame with rows that are grouped by common values.">RelationalGroupedDataFrame</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Row$.html" title=""></a>
+                        <a class="class" href="Row.html" title="Represents a row returned by the evaluation of a DataFrame."></a>
+                        <a href="Row.html" title="Represents a row returned by the evaluation of a DataFrame.">Row</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="SProcRegistration.html" title="Provides methods to register a SProc (Stored Procedure) in the Snowflake database."></a>
+                        <a href="SProcRegistration.html" title="Provides methods to register a SProc (Stored Procedure) in the Snowflake database.">SProcRegistration</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="SaveMode$.html" title="SaveMode configures the behavior when data is written from a DataFrame to a data source using a DataFrameWriter instance."></a>
+                        <a class="trait" href="SaveMode.html" title="Please refer to the companion SaveMode$ object."></a>
+                        <a href="SaveMode.html" title="Please refer to the companion SaveMode$ object.">SaveMode</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="Session$.html" title="Companion object to Session that you use to build and create a session."></a>
+                        <a class="class" href="Session.html" title="Establishes a connection with a Snowflake database and provides methods for creating DataFrames and accessing objects for working with files in stages."></a>
+                        <a href="Session.html" title="Establishes a connection with a Snowflake database and provides methods for creating DataFrames and accessing objects for working with files in stages.">Session</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="SnowparkClientException.html" title="Represents a Snowpark client side exception."></a>
+                        <a href="SnowparkClientException.html" title="Represents a Snowpark client side exception.">SnowparkClientException</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="StoredProcedure.html" title="The reference to a Stored Procedure which can be created by Session.sproc.register methods, and used in Session.storedProcedure method."></a>
+                        <a href="StoredProcedure.html" title="The reference to a Stored Procedure which can be created by Session.sproc.register methods, and used in Session.storedProcedure method.">StoredProcedure</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TableFunction.html" title="Looks up table functions by funcName and returns tableFunction object which can be used in DataFrame.join and Session.tableFunction methods."></a>
+                        <a href="TableFunction.html" title="Looks up table functions by funcName and returns tableFunction object which can be used in DataFrame.join and Session.tableFunction methods.">TableFunction</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="TypedAsyncJob.html" title="Provides a way to track an asynchronously executed action in a DataFrame."></a>
+                        <a href="TypedAsyncJob.html" title="Provides a way to track an asynchronously executed action in a DataFrame.">TypedAsyncJob</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="UDFRegistration.html" title="Provides methods to register lambdas and functions as UDFs in the Snowflake database."></a>
+                        <a href="UDFRegistration.html" title="Provides methods to register lambdas and functions as UDFs in the Snowflake database.">UDFRegistration</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="UDTFRegistration.html" title="Provides methods to register a UDTF (user-defined table function) in the Snowflake database."></a>
+                        <a href="UDTFRegistration.html" title="Provides methods to register a UDTF (user-defined table function) in the Snowflake database.">UDTFRegistration</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="Updatable.html" title="Represents a lazily-evaluated Updatable."></a>
+                        <a href="Updatable.html" title="Represents a lazily-evaluated Updatable.">Updatable</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="UpdatableAsyncActor.html" title="Provides APIs to execute Updatable actions asynchronously."></a>
+                        <a href="UpdatableAsyncActor.html" title="Provides APIs to execute Updatable actions asynchronously.">UpdatableAsyncActor</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="UpdateResult.html" title="Result of updating rows in an Updatable"></a>
+                        <a href="UpdateResult.html" title="Result of updating rows in an Updatable">UpdateResult</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="UserDefinedFunction.html" title="Encapsulates a user defined lambda or function that is returned by UDFRegistration.registerTemporary or by com.snowflake.snowpark.functions.udf."></a>
+                        <a href="UserDefinedFunction.html" title="Encapsulates a user defined lambda or function that is returned by UDFRegistration.registerTemporary or by com.snowflake.snowpark.functions.udf.">UserDefinedFunction</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="Window$.html" title="Contains functions to form WindowSpec."></a>
+                        <a href="Window$.html" title="Contains functions to form WindowSpec.">Window</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="WindowSpec.html" title="Represents a window frame clause."></a>
+                        <a href="WindowSpec.html" title="Represents a window frame clause.">WindowSpec</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="WriteFileResult.html" title="Represents the results of writing data from a DataFrame to a file in a stage."></a>
+                        <a href="WriteFileResult.html" title="Represents the results of writing data from a DataFrame to a file in a stage.">WriteFileResult</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="functions$.html" title="Provides utility functions that generate Column expressions that you can pass to DataFrame transformation methods."></a>
+                        <a href="functions$.html" title="Provides utility functions that generate Column expressions that you can pass to DataFrame transformation methods.">functions</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="tableFunctions$.html" title="Provides utility functions that generate table function expressions that can be passed to DataFrame join method and Session tableFunction method."></a>
+                        <a href="tableFunctions$.html" title="Provides utility functions that generate table function expressions that can be passed to DataFrame join method and Session tableFunction method.">tableFunctions</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../../index.html" class="extype" name="com">com</a>.<a href="../index.html" class="extype" name="com.snowflake">snowflake</a>.<a href="index.html" class="extype" name="com.snowflake.snowpark">snowpark</a></p>
+        <h1>MergeTypedAsyncJob<span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MergeTypedAsyncJob</span><span class="result"> extends <a href="TypedAsyncJob.html" class="extype" name="com.snowflake.snowpark.TypedAsyncJob">TypedAsyncJob</a>[<a href="MergeResult.html" class="extype" name="com.snowflake.snowpark.MergeResult">MergeResult</a>]</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides a way to track an asynchronously executed action in a MergeBuilder.
+</p></div><dl class="attributes block"> <dt>Since</dt><dd><p>1.3.0</p></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="TypedAsyncJob.html" class="extype" name="com.snowflake.snowpark.TypedAsyncJob">TypedAsyncJob</a>[<a href="MergeResult.html" class="extype" name="com.snowflake.snowpark.MergeResult">MergeResult</a>], <a href="AsyncJob.html" class="extype" name="com.snowflake.snowpark.AsyncJob">AsyncJob</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="com.snowflake.snowpark.MergeTypedAsyncJob"><span>MergeTypedAsyncJob</span></li><li class="in" name="com.snowflake.snowpark.TypedAsyncJob"><span>TypedAsyncJob</span></li><li class="in" name="com.snowflake.snowpark.AsyncJob"><span>AsyncJob</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="com.snowflake.snowpark.AsyncJob#cancel" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cancel():Unit"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#cancel():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cancel</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Cancel the underlying query if it is running.</p><div class="fullcomment"><div class="comment cmt"><p>Cancel the underlying query if it is running.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AsyncJob.html" class="extype" name="com.snowflake.snowpark.AsyncJob">AsyncJob</a></dd><dt>Since</dt><dd><p>0.11.0</p></dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="com.snowflake.snowpark.AsyncJob#getIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getIterator(maxWaitTimeInSeconds:Int):Iterator[com.snowflake.snowpark.Row]"></a><a id="getIterator(Int):Iterator[Row]"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#getIterator(maxWaitTimeInSeconds:Int):Iterator[com.snowflake.snowpark.Row]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getIterator</span><span class="params">(<span name="maxWaitTimeInSeconds">maxWaitTimeInSeconds: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">session.requestTimeoutInSeconds</span></span>)</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<a href="Row.html" class="extype" name="com.snowflake.snowpark.Row">Row</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns an iterator of <a href="Row.html" class="extype" name="com.snowflake.snowpark.Row">Row</a> objects that you can use to retrieve the results for
+the underlying query.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an iterator of <a href="Row.html" class="extype" name="com.snowflake.snowpark.Row">Row</a> objects that you can use to retrieve the results for
+the underlying query.</p><p>Unlike the <a href="AsyncJob.html#getRows(maxWaitTimeInSeconds:Int):Array[com.snowflake.snowpark.Row]" class="extmbr" name="com.snowflake.snowpark.AsyncJob#getRows">getRows</a> method, this method does not load all data into memory at once.
+</p></div><dl class="paramcmts block"><dt class="param">maxWaitTimeInSeconds</dt><dd class="cmt"><p>The maximum number of seconds to wait for the query to
+                            complete before attempting to retrieve the results.
+                            The default value is the value of the
+                            <code>snowpark_request_timeout_in_seconds</code> configuration property.</p></dd><dt>returns</dt><dd class="cmt"><p>An Iterator of <a href="Row.html" class="extype" name="com.snowflake.snowpark.Row">Row</a> objects</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AsyncJob.html" class="extype" name="com.snowflake.snowpark.AsyncJob">AsyncJob</a></dd><dt>Since</dt><dd><p>0.11.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.AsyncJob#getQueryId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getQueryId():String"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#getQueryId():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getQueryId</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Get the query ID for the underlying query.</p><div class="fullcomment"><div class="comment cmt"><p>Get the query ID for the underlying query.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a query ID</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AsyncJob.html" class="extype" name="com.snowflake.snowpark.AsyncJob">AsyncJob</a></dd><dt>Since</dt><dd><p>0.11.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.MergeTypedAsyncJob#getResult" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getResult(maxWaitTimeInSeconds:Int):com.snowflake.snowpark.MergeResult"></a><a id="getResult(Int):MergeResult"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#getResult(maxWaitTimeInSeconds:Int):com.snowflake.snowpark.MergeResult" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getResult</span><span class="params">(<span name="maxWaitTimeInSeconds">maxWaitTimeInSeconds: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">session.requestTimeoutInSeconds</span></span>)</span><span class="result">: <a href="MergeResult.html" class="extype" name="com.snowflake.snowpark.MergeResult">MergeResult</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the MergeResult for the MergeBuilder's action
+</p><div class="fullcomment"><div class="comment cmt"><p>Returns the MergeResult for the MergeBuilder's action
+</p></div><dl class="paramcmts block"><dt class="param">maxWaitTimeInSeconds</dt><dd class="cmt"><p>The maximum number of seconds to wait for the query to
+                            complete before attempting to retrieve the results.
+                            The default value is the value of the
+                            <code>snowpark_request_timeout_in_seconds</code> configuration property.</p></dd><dt>returns</dt><dd class="cmt"><p>The <a href="MergeResult.html" class="extype" name="com.snowflake.snowpark.MergeResult">MergeResult</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="com.snowflake.snowpark.MergeTypedAsyncJob">MergeTypedAsyncJob</a> → <a href="TypedAsyncJob.html" class="extype" name="com.snowflake.snowpark.TypedAsyncJob">TypedAsyncJob</a></dd><dt>Since</dt><dd><p>1.3.0</p></dd></dl></div>
+    </li><li name="com.snowflake.snowpark.AsyncJob#getRows" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getRows(maxWaitTimeInSeconds:Int):Array[com.snowflake.snowpark.Row]"></a><a id="getRows(Int):Array[Row]"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#getRows(maxWaitTimeInSeconds:Int):Array[com.snowflake.snowpark.Row]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getRows</span><span class="params">(<span name="maxWaitTimeInSeconds">maxWaitTimeInSeconds: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">session.requestTimeoutInSeconds</span></span>)</span><span class="result">: <span class="extype" name="scala.Array">Array</span>[<a href="Row.html" class="extype" name="com.snowflake.snowpark.Row">Row</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns an Array of <a href="Row.html" class="extype" name="com.snowflake.snowpark.Row">Row</a> objects that represent the results of the underlying query.</p><div class="fullcomment"><div class="comment cmt"><p>Returns an Array of <a href="Row.html" class="extype" name="com.snowflake.snowpark.Row">Row</a> objects that represent the results of the underlying query.
+</p></div><dl class="paramcmts block"><dt class="param">maxWaitTimeInSeconds</dt><dd class="cmt"><p>The maximum number of seconds to wait for the query to
+                            complete before attempting to retrieve the results.
+                            The default value is the value of the
+                            <code>snowpark_request_timeout_in_seconds</code> configuration property.</p></dd><dt>returns</dt><dd class="cmt"><p>An Array of <a href="Row.html" class="extype" name="com.snowflake.snowpark.Row">Row</a> objects</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AsyncJob.html" class="extype" name="com.snowflake.snowpark.AsyncJob">AsyncJob</a></dd><dt>Since</dt><dd><p>0.11.0</p></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="com.snowflake.snowpark.AsyncJob#isDone" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isDone():Boolean"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#isDone():Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isDone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns true if the underlying query completed.</p><div class="fullcomment"><div class="comment cmt"><p>Returns true if the underlying query completed.</p><p>Completion may be due to query success, cancellation or failure,
+in all of these cases, this method will return true.
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if this query completed.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="AsyncJob.html" class="extype" name="com.snowflake.snowpark.AsyncJob">AsyncJob</a></dd><dt>Since</dt><dd><p>0.11.0</p></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@HotSpotIntrinsicCandidate</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../../com/snowflake/snowpark/MergeTypedAsyncJob.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: ">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+                <span class="name">@Deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"></dd></dl></div>
+    </li></ol>
+            </div>
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="com.snowflake.snowpark.TypedAsyncJob">
+              <h3>Inherited from <a href="TypedAsyncJob.html" class="extype" name="com.snowflake.snowpark.TypedAsyncJob">TypedAsyncJob</a>[<a href="MergeResult.html" class="extype" name="com.snowflake.snowpark.MergeResult">MergeResult</a>]</h3>
+            </div><div class="parent" name="com.snowflake.snowpark.AsyncJob">
+              <h3>Inherited from <a href="AsyncJob.html" class="extype" name="com.snowflake.snowpark.AsyncJob">AsyncJob</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> © 2021 Snowflake Inc. All Rights Reserved </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>
